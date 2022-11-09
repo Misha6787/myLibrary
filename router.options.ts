@@ -5,7 +5,7 @@ export default <RouterConfig> {
         {
             name: 'home',
             path: '/',
-            component: () => import('./pages/index')
+            component: () => import('./pages/index'),
         },
         {
             name: 'about',

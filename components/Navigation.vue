@@ -8,4 +8,9 @@
   </nav>
 </template>
 
-<style scoped></style>
+<style scoped>
+  .menu {
+    background-color: cornflowerblue;
+  }
+
+</style>

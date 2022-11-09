@@ -6,6 +6,12 @@
 </template>
 
 <script lang="ts" setup>
+  useHead({
+    bodyAttrs: {
+      class: 'dark:bg-gray-900 bg-gray-50'
+    },
+  })
+
   const getColor =  async () => await useAppConfig();
 
   const appConfig = await getColor();

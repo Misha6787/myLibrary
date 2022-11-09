@@ -3,6 +3,17 @@
 
 
 export default defineNuxtConfig({
+    modules: ['@nuxtjs/tailwindcss', '@nuxtjs/color-mode'],
+    tailwindcss: {
+        cssPath: '~/assets/css/tailwind.css',
+        configPath: 'tailwind.config.js',
+        exposeConfig: false,
+        injectPosition: 0,
+        viewer: true,
+    },
+    colorMode: {
+        classSuffix: ''
+    },
     app: {
         head: {
             charset: 'utf-8',
@@ -16,12 +27,18 @@ export default defineNuxtConfig({
     },
     pages: true,
 
-    css: ['~/assets/css/tailwind.css', '~/assets/css/main.css'],
-    build: {
-        postcss: {
-            postcssOptions: require('./postcss.config.js'),
-        },
-    },
+    css: [
+        // CSS
+        '~/assets/css/main.css',
+        '~/assets/css/tailwind.css',
+        // SCSS
+        '~/assets/scss/main.scss',
+    ],
+    // build: {
+    //     postcss: {
+    //         postcssOptions: require('./postcss.config.js'),
+    //     },
+    // },
 
     // modules: '@nuxt/tailwindcss',
     // buildModules: [

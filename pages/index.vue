@@ -1,25 +1,18 @@
 <template>
-    <h1>Home</h1>
-  <h1 class="flex">
-    Hello world!
-  </h1>
+    <h1 class="dark:text-gray-50 text-3xl font-bold text-gray-900">Home</h1>
     <pre>{{ route }}</pre>
 </template>
 
 <script setup lang="ts">
-useHead({
-  title: 'Main Page',
-  meta: [
-    { name: 'description', content: 'Main page' }
-  ],
-  bodyAttrs: {
-    class: 'test'
-  },
-  script: [ { children: 'console.log(\'Hello world\')' } ]
-})
+  useHead({
+    title: 'Main Page',
+    meta: [
+      { name: 'description', content: 'Main page' }
+    ]
+  })
 
-const route = useRoute()
-// console.log(route) // My home page
+  const route = useRoute()
+  // console.log(route) // My home page
 
 </script>
 

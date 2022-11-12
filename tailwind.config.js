@@ -1,4 +1,4 @@
-import colors from 'tailwindcss/colors'
+import colors from 'tailwindcss/colors';
 
 export default {
   darkMode: 'class',
@@ -62,5 +62,26 @@ export default {
       'gradient-to-l': 'linear-gradient(to left, var(--tw-gradient-stops))',
       'gradient-to-tl': 'linear-gradient(to top left, var(--tw-gradient-stops))',
     },
+    maxWidth: ({ theme, breakpoints }) => ({
+      none: 'none',
+      0: '0rem',
+      xs: '20rem', // 320
+      sm: '24rem', // 384
+      md: '28rem', // 480
+      lg: '32rem', // 512
+      xl: '36rem', // 576
+      '2xl': '42rem', // 672
+      '3xl': '48rem', // 768
+      '4xl': '56rem', // 896
+      '5xl': '64rem', // 1024
+      '6xl': '72rem', // 1152
+      '7xl': '80rem', // 1280
+      full: '100%',
+      min: 'min-content',
+      max: 'max-content',
+      fit: 'fit-content',
+      prose: '65ch',
+      ...breakpoints(theme('screens')),
+    }),
   }
 }

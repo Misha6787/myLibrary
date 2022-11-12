@@ -1,6 +1,6 @@
 <template>
-    <h1 class="dark:text-gray-50 text-3xl font-bold text-gray-900">Home</h1>
-    <pre>{{ route }}</pre>
+  <h1 class="dark:text-gray-50 text-3xl font-bold text-gray-900">Home</h1>
+  <pre>{{ route }}</pre>
 </template>
 
 <script setup lang="ts">
@@ -11,7 +11,12 @@
     ]
   })
 
+  definePageMeta({
+    title: 'test'
+  });
+
   const route = useRoute()
+  console.log(route.meta)
   // console.log(route) // My home page
 
 </script>

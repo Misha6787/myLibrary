@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .menu__item {
+        @apply dark:text-gray-50 text-xl text-gray-900 p-4 hover:scale-125 transition-transform
+    }
+    .container {
+        @apply max-w-sm sm:max-w-xl md:max-w-2xl xl:max-w-6xl 2xl:max-w-7xl mx-auto
+    }
+}

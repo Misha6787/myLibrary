@@ -2,29 +2,29 @@
   <Navigation></Navigation>
   <div class="max-w-full">
     <div class="container">
-<!--      <h1>{{ route }}</h1>-->
+      <Breadcrumbs></Breadcrumbs>
+      <h1 class="dark:text-gray-50 text-3xl font-bold text-gray-900">{{ route.meta.title }}</h1>
+<!--      <pre>-->
+<!--        {{ route }}-->
+<!--      </pre>-->
       <slot />
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
+  import Breadcrumbs from "~/components/Breadcrumbs";
+  import Navigation from "~/components/Navigation";
+
   useHead({
     bodyAttrs: {
-      class: 'dark:bg-gray-900 bg-gray-50 max-w-full'
+      class: 'dark:text-gray-50 dark:bg-gray-900 bg-gray-50 max-w-full'
     },
   })
 
-  const route = useRoute();
-  console.log(route.meta)
-  const getColor =  async () => await useAppConfig();
+  const route = useRoute(); // рут с информацией со страницами
+  const router = useRouter(); // Методы для работы с рутами
 
-  const appConfig = await getColor();
-
-  import Navigation from "../components/Navigation";
-
+  // const getColor =  async () => await useAppConfig();
+  // const appConfig = await getColor();
 </script>
-
-<style scoped>
-
-</style>

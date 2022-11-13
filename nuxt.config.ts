@@ -28,11 +28,8 @@ export default defineNuxtConfig({
     pages: true,
 
     css: [
-        // CSS
-        '~/assets/css/main.css',
+        '~/assets/css/custom.css',
         '~/assets/css/tailwind.css',
-        // SCSS
-        '~/assets/scss/main.scss',
     ],
     // build: {
     //     postcss: {

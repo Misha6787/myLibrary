@@ -3,6 +3,7 @@
     <ul class="flex justify-end items-center container">
       <li class="menu__item"><NuxtLink to="/">Главная</NuxtLink></li>
       <li class="menu__item"><NuxtLink to="/about">О нас</NuxtLink></li>
+      <li class="menu__item"><NuxtLink to="/posts">Посты</NuxtLink></li>
 
       <span class="block p-4" @click="setColorTheme($colorMode.preference === 'dark' ? 'light' : 'dark')">
         <svg v-if="$colorMode.value === 'dark'" xmlns="http://www.w3.org/2000/svg"
@@ -23,11 +24,9 @@
 </template>
 
 <script setup lang="ts">
-  const setColorTheme = (newTheme: Theme) => {
-    useColorMode().preference = newTheme
-  }
+  const setColorTheme = (newTheme: Theme) => useColorMode().preference = newTheme
 </script>
 
-<style lang="scss">
+<style>
 
 </style>

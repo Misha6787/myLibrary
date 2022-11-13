@@ -9,4 +9,7 @@
     .container {
         @apply max-w-sm sm:max-w-xl md:max-w-2xl xl:max-w-6xl 2xl:max-w-7xl mx-auto
     }
+    .breadcrumbs__item {
+        @apply [&:not(:last-child)]:mr-2 [&:not(:last-child)]:after:content-['/'] [&:not(:last-child)]:after:ml-2 text-sm hover:opacity-75 transition-opacity
+    }
 }

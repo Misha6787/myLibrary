@@ -1,11 +1,11 @@
 <template>
-    <h1></h1>
+    <h1>ааврр</h1>
 </template>
 
-<script lang="ts">
-export default {
-  name: "index.vue"
-}
+<script setup lang="ts">
+  definePageMeta({
+    title: 'О нас'
+  });
 </script>
 
 <style scoped>

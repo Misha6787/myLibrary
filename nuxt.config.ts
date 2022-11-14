@@ -15,6 +15,8 @@ export default defineNuxtConfig({
         classSuffix: ''
     },
     app: {
+        pageTransition: { name: 'page', mode: 'slide' },
+        layoutTransition: { name: 'layout', mode: 'slide' },
         head: {
             charset: 'utf-8',
             viewport: 'width=device-width, initial-scale=1',

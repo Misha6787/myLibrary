@@ -66,6 +66,11 @@
   const route = useRoute();
   const router = useRouter();
 
+  // useAsyncData((context) => {
+  //   console.log(context)
+  //   return { name: 'World' }
+  // })
+
   let metaNames = route;
   let metaNames2 = route.fullPath.split('/');
 

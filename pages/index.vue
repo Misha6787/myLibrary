@@ -13,7 +13,7 @@
   })
 
   definePageMeta({
-    title: 'Главная'
+    title: 'Главная',
   });
 
 

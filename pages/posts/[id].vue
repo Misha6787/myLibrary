@@ -9,15 +9,14 @@
 <script setup lang="ts">
   const route = useRoute();
 
-  definePageMeta({
-    // title: 'Пост'
-    title: 'Пост'
-  });
-
-  const title = ref('my title')
-
   const post = await fetch(`https://jsonplaceholder.typicode.com/posts/${route.params.id}`)
       .then((response) => response.json())
+
+  definePageMeta({
+    // title: 'Пост'
+    key: route => route.fullPath,
+    title: 'Пост'
+  });
 
 </script>
 

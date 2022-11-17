@@ -1,11 +1,22 @@
 <template>
-    <canvas ref="canvas" id="canvas" class="w-[400px] h-[400px] border mt-4"></canvas>
+  <img src="../assets/image/test.jpg" class="mt-4 mx-auto absolute w-[1000px] h-[500px] t-0" alt="">
+    <canvas
+        ref="canvas" id="canvas" width="1000px" height="500px" class="mt-4 mx-auto absolute z-10"
+        @mousedown="onMouseDown"
+        @mousemove="onMouseMove">
+    </canvas>
 </template>
 
-<script setup>
-  // import {onMounted} from "#imports";
-  import { onMounted, ref, reactive } from '#imports'
-  // import { CanvasManager } from '@/managers/canvasmanager'
+<script setup lang="ts">
+  // import { onMounted, ref, reactive } from '#imports'
+
+  const roadMap = [
+    {
+      name: 'test',
+      x: 220,
+      y: 220
+    }
+  ]
 
   definePageMeta({
     title: 'Canvas'
@@ -13,16 +24,41 @@
 
   const canvas = ref<HTMLCanvasElement>();
 
-  const drawCircle = () => {
+  onMounted(() => {
+    drawCircle(10, 10)
+  })
+
+  const drawCircle = (x:number, y:number) => {
     let ctx = canvas.value?.getContext('2d');
     if (ctx) {
+
       ctx.beginPath()
-      ctx.arc(100, 75, 50, 0, 2 * Math.PI);
-      ctx.stroke();
+      ctx.arc(x, y, 30, 0, 2 * Math.PI);
+      ctx.fillStyle = 'black';
+      ctx.fill()
     }
   }
 
-  drawCircle()
+  const onMouseDown = (e:MouseEvent) => {
+    let x = e.offsetX;
+    let y = e.offsetY;
+    drawCircle(x,y);
+    // console.log(e)
+  }
+
+  const onMouseMove = (e:MouseEvent) => {
+    // console.log(e)
+  }
+
+  // const onMouseMove = (e:MouseEvent) => {
+  //   // Check whether point is inside circle
+  //   const isPointInPath = ctx.isPointInPath(circle, event.offsetX, event.offsetY);
+  //   ctx.fillStyle = isPointInPath ? 'green' : 'red';
+  //
+  //   // Draw circle
+  //   ctx.clearRect(0, 0, canvas.width, canvas.height);
+  //   ctx.fill(circle);
+  // }
 
   // let myCanvas = ref(null)
   // let myContext = ref(null)

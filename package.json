@@ -16,5 +16,8 @@
     "tailwindcss": "^3.2.3",
     "vue-i18n": "^9.2.2",
     "vue-router": "^4.1.6"
+  },
+  "dependencies": {
+    "fabric": "^5.2.4"
   }
 }

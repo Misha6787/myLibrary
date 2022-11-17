@@ -71,10 +71,6 @@
   //   return { name: 'World' }
   // })
 
-  route.meta.key(item => {
-    console.log(item)
-  })
-
   let metaNames = route;
   let metaNames2 = route.fullPath.split('/');
 

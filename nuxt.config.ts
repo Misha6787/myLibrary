@@ -11,6 +11,46 @@ export default defineNuxtConfig({
     colorMode: {
         classSuffix: ''
     },
+    // router: {
+    //     extendRoutes(routes, resolve) {
+    //         return [
+    //             {
+    //                 name: 'home',
+    //                 path: '/',
+    //                 component: () => import('~/pages/index'),
+    //                 meta: {
+    //                     title: 'test',
+    //                     breadCrumb: 'Главная'
+    //                 }
+    //             },
+    //             {
+    //                 name: 'about',
+    //                 path: '/about',
+    //                 component: () => import('~/pages/about'),
+    //                 meta: {
+    //                     title: 'test',
+    //                     breadCrumb: 'Главная'
+    //                 }
+    //             },
+    //             {
+    //                 name: 'posts',
+    //                 path: '/posts',
+    //                 component: () => import('~/pages/posts/posts'),
+    //                 breadCrumb: 'Посты',
+    //                 children: [
+    //                     {
+    //                         path: '/posts/[id]',
+    //                         component: () => import('~/pages/[id]'),
+    //                         props: true,
+    //                         meta: {
+    //                             breadCrumb: 'Главная'
+    //                         }
+    //                     }
+    //                 ]
+    //             }
+    //         ]
+    //     }
+    // },
     app: {
         pageTransition: { name: 'page' },
         layoutTransition: { name: 'layout' },

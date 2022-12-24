@@ -1,5 +1,5 @@
 <template>
-  <NuxtPage></NuxtPage>
+<!--  <NuxtPage></NuxtPage>-->
   <h1>Каталог постов</h1>
   <section class="flex justify-between flex-wrap">
     <article class="basis-1/3 p-3 hover:dark:text-gray-900 cursor-pointer rounded hover:bg-blue-100 transition" v-for="post in posts" @click.prevent="router.push(`/posts/${post.id}`)">

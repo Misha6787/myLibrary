@@ -13,6 +13,12 @@
   const post = await fetch(`https://jsonplaceholder.typicode.com/posts/${route.params.id}`)
       .then((response) => response.json())
 
+  const props = defineProps({
+    foo: String
+  });
+
+  console.log(props);
+
   definePageMeta({
     // title: 'Пост'
     key: route => route.fullPath,

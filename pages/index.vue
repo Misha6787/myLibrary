@@ -12,9 +12,9 @@
     ]
   })
 
-  definePageMeta({
-    title: 'Главная',
-  });
+  // definePageMeta({
+  //   title: 'Главная',
+  // });
 
 
 

@@ -1,11 +1,19 @@
 <template>
+  <div>
     <h1>ааврр</h1>
+  </div>
 </template>
 
-<script setup lang="ts">
-  definePageMeta({
-    title: 'О нас'
-  });
+<router>
+  {
+    name: 'test',
+    path: '/about',
+    alias: '/about'
+  }
+</router>
+
+<script setup>
+
 </script>
 
 <style scoped>
